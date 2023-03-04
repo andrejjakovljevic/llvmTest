@@ -1,0 +1,4 @@
+; RUN: %clang %s -o %t
+; RUN: %t | FileCheck %s
+
+; CHECK: foo and stuff
