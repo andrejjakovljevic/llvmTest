@@ -1,0 +1,14 @@
+# Test the output of the program
+; RUN: %clang -o test %s
+; RUN: ./test | FileCheck %s
+
+#include <stdio.h>
+
+int main() {
+  char title[] = "foo and stuff\n";
+  printf("%s", title);
+  return 0;
+}
+
+# Check the output of the program
+# CHECK: foo and stuff
